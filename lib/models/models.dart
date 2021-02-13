@@ -14,3 +14,25 @@ class User {
         name: json['name'],
       );
 }
+
+class ChatUsers {
+  final String name;
+  final String messageText;
+  final String time;
+
+  ChatUsers({
+    @required this.name,
+    @required this.messageText,
+    @required this.time,
+  });
+}
+
+class ChatMessage {
+  final String messageContent;
+  final String messageType;
+
+  ChatMessage({
+    @required this.messageContent,
+    @required this.messageType,
+  });
+}

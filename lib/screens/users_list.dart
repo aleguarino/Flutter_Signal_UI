@@ -5,6 +5,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:signal_clone/models/models.dart';
+import 'package:signal_clone/screens/inbox.dart';
 
 class UsersList extends StatelessWidget {
   @override
@@ -42,6 +43,12 @@ class _SignalListState extends State<SignalList> {
             return ListView.builder(
               itemCount: snapshot.data.length,
               itemBuilder: (context, index) => InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Inbox(),
+                  ),
+                ),
                 splashColor: getRandomColor(),
                 child: Ink(
                   child: ListTile(
